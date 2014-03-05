@@ -8,9 +8,9 @@ Reference: http://doc.owncloud.org/server/6.0/admin_manual/configuration/auth_ld
 ownCloud can read an LDAP attribute and set the user quota according to its value. 
 The attribute shall return human readable values, e.g. "2 GB".
 
-## Usage in LDAP
+## Usage
 
-A user can be extended with the `objectClass: ownCloud` and the attribute `ownCloudQuota` can be used
+A user can be extended with the auxillary `objectClass: ownCloud` and the attribute `ownCloudQuota` can be used
 to define the user specific quota limit.
 
 ## Installation
