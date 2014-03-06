@@ -14,11 +14,11 @@ to define the user specific quota limit.
 
 ## Installation
 
-To install the schema in a OpenLDAP use the following command:
+To install the schema in a OpenLDAP using OLC (cn=config), use the `ldapadd` command:
 
     root# ldapadd -Y EXTERNAL -H ldapi:/// -f owncloud.ldif
    
-And check that the schema is correctly loaded:
+And verify that the schema is correctly loaded:
 
     root# ldapsearch -H ldapi:// -Y EXTERNAL -LLL -b cn=config "(cn={*}owncloud)"
     ...
@@ -30,6 +30,8 @@ And check that the schema is correctly loaded:
      r Quota (e.g. 2 GB)' SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' )
     olcObjectClasses: {0}( 1.3.6.1.4.1.39430.1.2.1 NAME 'ownCloud' DESC 'ownCloud 
       LDAP Schema' AUXILIARY MAY ( ownCloudQuota ) )
+
+If you LDAP server does not use OLC (cn=config), then add the schema `owncloud.schema` in the schema directory. 
 
 
 ## Example
