@@ -1,6 +1,5 @@
 # LDAP Schema for OwnCloud
 
-
 Reference: http://doc.owncloud.org/server/6.0/admin_manual/configuration/auth_ldap.html
 
 ## Quota Field
@@ -28,7 +27,7 @@ And check that the schema is correctly loaded:
     objectClass: olcSchemaConfig
     cn: {5}owncloud
     olcAttributeTypes: {0}( 1.3.6.1.4.1.39430.1.1.1 NAME 'ownCloudQuota' DESC 'Use
-     r Quota (i.e. 2 GB)' SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' )
+     r Quota (e.g. 2 GB)' SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' )
     olcObjectClasses: {0}( 1.3.6.1.4.1.39430.1.2.1 NAME 'ownCloud' DESC 'ownCloud 
       LDAP Schema' AUXILIARY MAY ( ownCloudQuota ) )
 
