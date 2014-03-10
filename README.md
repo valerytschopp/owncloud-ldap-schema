@@ -2,10 +2,18 @@
 
 Reference: http://doc.owncloud.org/server/6.0/admin_manual/configuration/auth_ldap.html
 
-## Quota Field
+## ownCloud Schema
+
+OwnCloud Inc. has register the OID 1.3.6.1.4.1.39430 
+
+**ObjectClass**: ownCloud
+
+### Quota Field
 
 ownCloud can read an LDAP attribute and set the user quota according to its value. 
 The attribute shall return human readable values, e.g. "2 GB".
+
+**AttributeType**: ownCloudQuota
 
 ## Usage
 
@@ -31,7 +39,7 @@ And verify that the schema is correctly loaded:
     olcObjectClasses: {0}( 1.3.6.1.4.1.39430.1.2.1 NAME 'ownCloud' DESC 'ownCloud 
       LDAP Schema' AUXILIARY MAY ( ownCloudQuota ) )
 
-If you LDAP server does not use OLC (cn=config), then add the schema `owncloud.schema` in the schema directory. 
+If you LDAP server does not use OLC (cn=config), then add the schema `owncloud.schema` in the schema directory, and update your configuration accordingly.
 
 
 ## Example
