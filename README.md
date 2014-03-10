@@ -4,16 +4,18 @@ Reference: http://doc.owncloud.org/server/6.0/admin_manual/configuration/auth_ld
 
 ## ownCloud Schema
 
-OwnCloud Inc. has register the OID 1.3.6.1.4.1.39430 
+OwnCloud Inc. has register the [OID 1.3.6.1.4.1.39430](http://oid-info.com/get/1.3.6.1.4.1.39430) and we extended it to define the required LDAP objects 
 
-**ObjectClass**: ownCloud
+- **ObjectClass**: ownCloud
+- **OID**: 1.3.6.1.4.1.39430.1.2.1
 
 ### Quota Field
 
 ownCloud can read an LDAP attribute and set the user quota according to its value. 
 The attribute shall return human readable values, e.g. "2 GB".
 
-**AttributeType**: ownCloudQuota
+- **AttributeType**: ownCloudQuota
+- **OID**: 1.3.6.1.4.1.39430.1.1.1
 
 ## Usage
 
