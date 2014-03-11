@@ -19,7 +19,7 @@ The attribute shall return human readable values, e.g. "2 GB".
 
 #### Quota Field Syntax
 
-The format of the quota field is a string. You can use the following units (upper and lower case): **B**, **KB**, **K**, **MB**, **M**, **GB**, **G**, **TB**, **T**, **PB**, **P**. If no unit is specified, the default is **B** (byte). 
+The format of the quota field is a string, describing the size of the user quota. You can use the following units (upper and lower case) for the size: **B**, **KB**, **K**, **MB**, **M**, **GB**, **G**, **TB**, **T**, **PB**, **P**. If no unit is specified, the default size is in byte (**B**). 
 
 **Valid Value Examples**: "234234", "132594 PB", "748G" 
 
