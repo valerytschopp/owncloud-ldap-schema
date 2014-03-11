@@ -6,16 +6,22 @@ Reference: http://doc.owncloud.org/server/6.0/admin_manual/configuration/auth_ld
 
 OwnCloud Inc. has register the [OID 1.3.6.1.4.1.39430](http://oid-info.com/get/1.3.6.1.4.1.39430) and we extended it to define the required LDAP objects 
 
-- **ObjectClass**: ownCloud
 - **OID**: 1.3.6.1.4.1.39430.1.2.1
+- **ObjectClass**: ownCloud
 
 ### Quota Field
 
 ownCloud can read an LDAP attribute and set the user quota according to its value. 
 The attribute shall return human readable values, e.g. "2 GB".
 
-- **AttributeType**: ownCloudQuota
 - **OID**: 1.3.6.1.4.1.39430.1.1.1
+- **AttributeType**: ownCloudQuota
+
+#### Quota Field Syntax
+
+The format of the quota field is a string. You can use the following units (upper and lower case): **B**, **KB**, **K**, **MB**, **M**, **GB**, **G**, **TB**, **T**, **PB**, **P**. If no unit is specified, the default is **B** (byte). 
+
+**Valid Value Examples**: "234234", "132594 PB", "748G" 
 
 ## Usage
 
