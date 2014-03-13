@@ -67,6 +67,6 @@ If your LDAP server does not use OLC (cn=config), then add the schema `owncloud.
     mail: valery.tschopp@switch.ch
     isMemberOf: ownCloud
     isMemberOf: OpenStack
-    ownCloudQuota: 10 GB
+    ownCloudQuota: 5 TB
 
 
