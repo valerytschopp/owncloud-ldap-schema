@@ -47,7 +47,7 @@ And verify that the schema is correctly loaded:
     olcObjectClasses: {0}( 1.3.6.1.4.1.39430.1.2.1 NAME 'ownCloud' DESC 'ownCloud 
       LDAP Schema' AUXILIARY MAY ( ownCloudQuota ) )
 
-If you LDAP server does not use OLC (cn=config), then add the schema `owncloud.schema` in the schema directory, and update your configuration accordingly.
+If your LDAP server does not use OLC (cn=config), then add the schema `owncloud.schema` in the schema directory, and update your configuration accordingly.
 
 
 ## Example
