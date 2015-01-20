@@ -43,7 +43,8 @@ And verify that the schema is correctly loaded:
     objectClass: olcSchemaConfig
     cn: {5}owncloud
     olcAttributeTypes: {0}( 1.3.6.1.4.1.39430.1.1.1 NAME 'ownCloudQuota' DESC 'Use
-     r Quota (e.g. 2 GB)' SYNTAX '1.3.6.1.4.1.1466.115.121.1.15' )
+     r Quota (e.g. 2 GB)' EQUALITY caseIgnoreMatch SUBSTR caseIgnoreSubstringsMatc
+     h SINGLE-VALUE SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
     olcObjectClasses: {0}( 1.3.6.1.4.1.39430.1.2.1 NAME 'ownCloud' DESC 'ownCloud 
       LDAP Schema' AUXILIARY MAY ( ownCloudQuota ) )
 
