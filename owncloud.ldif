@@ -8,7 +8,11 @@
 # Specify the attribute here, otherwise keep it empty. The attribute shall return 
 # human readable values, e.g. "2 GB".
 #
-# ldapadd -Y EXTERNAL -H ldapi:/// -f owncloud.ldif 
+# INSTALLATION:
+# sudo ldapadd -Y EXTERNAL -H ldapi:/// -f owncloud.ldif 
+#
+# SOURCE:
+# https://github.com/valerytschopp/owncloud-ldap-schema
 #
 # WARNING: the spaces ' ' in the definitions are very important!!!
 
