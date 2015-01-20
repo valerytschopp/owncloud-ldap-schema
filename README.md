@@ -2,10 +2,26 @@
 
 Reference: http://doc.owncloud.org/server/6.0/admin_manual/configuration/auth_ldap.html
 
-## Quota Field
+## ownCloud Schema
+
+OwnCloud Inc. has register the [OID 1.3.6.1.4.1.39430](http://oid-info.com/get/1.3.6.1.4.1.39430) and we extended it to define the required LDAP objects 
+
+- **OID**: 1.3.6.1.4.1.39430.1.2.1
+- **ObjectClass**: ownCloud
+
+### Quota Field
 
 ownCloud can read an LDAP attribute and set the user quota according to its value. 
 The attribute shall return human readable values, e.g. "2 GB".
+
+- **OID**: 1.3.6.1.4.1.39430.1.1.1
+- **AttributeType**: ownCloudQuota
+
+#### Quota Field Syntax
+
+The format of the quota field is a string, describing the size of the user quota. You can use the following units (case insensitive) for the size: **B**, **KB**, **K**, **MB**, **M**, **GB**, **G**, **TB**, **T**, **PB**, **P**. If no unit is specified, the default size is in byte (**B**). 
+
+**Valid Value Examples**: "234234", "132594 PB", "748G" 
 
 ## Usage
 
@@ -31,7 +47,7 @@ And verify that the schema is correctly loaded:
     olcObjectClasses: {0}( 1.3.6.1.4.1.39430.1.2.1 NAME 'ownCloud' DESC 'ownCloud 
       LDAP Schema' AUXILIARY MAY ( ownCloudQuota ) )
 
-If you LDAP server does not use OLC (cn=config), then add the schema `owncloud.schema` in the schema directory. 
+If your LDAP server does not use OLC (cn=config), then add the schema `owncloud.schema` in the schema directory, and update your configuration accordingly.
 
 
 ## Example
@@ -51,6 +67,6 @@ If you LDAP server does not use OLC (cn=config), then add the schema `owncloud.s
     mail: valery.tschopp@switch.ch
     isMemberOf: ownCloud
     isMemberOf: OpenStack
-    ownCloudQuota: 10 GB
+    ownCloudQuota: 5 TB
 
 
