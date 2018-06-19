@@ -19,17 +19,17 @@
 dn: cn=owncloud,cn=schema,cn=config
 objectClass: olcSchemaConfig
 cn: owncloud
-olcAttributeTypes: ( 1.3.6.1.4.1.39430.1.1.1 
- NAME 'ownCloudQuota' 
- DESC 'User Quota (e.g. 2 GB)' 
- EQUALITY caseExactMatch 
- SUBSTR caseIgnoreSubstringsMatch 
- SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+olcAttributeTypes: {0}( 1.3.6.1.4.1.39430.1.1.1
+ NAME 'ownCloudQuota'
+ DESC 'User Quota (e.g. 15 GB)'
+ EQUALITY caseExactMatch
+ SUBSTR caseIgnoreSubstringsMatch
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
  SINGLE-VALUE )
-olcObjectClasses: ( 1.3.6.1.4.1.39430.1.2.1 
- NAME 'ownCloud' 
- DESC 'ownCloud LDAP Schema' 
- AUXILIARY 
- MAY ( ownCloudQuota ) )
+olcObjectClasses: {0}( 1.3.6.1.4.1.39430.1.2.1
+ NAME 'ownCloud'
+ DESC 'ownCloud LDAP Schema'
+ AUXILIARY
+ MAY ownCloudQuota )
 
 
